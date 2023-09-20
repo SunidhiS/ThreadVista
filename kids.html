@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ThreadVista: Your Fashion Odyssey</title>
+
+    <!-- Include the Bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+    <!-- Include Font Awesome icons from a CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Include custom stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Include a JavaScript file with the 'defer' attribute for asynchronous loading -->
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header></header>
+
+    <section class="allproducts-list">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mt-5 p-5 right">
+                    <div class="container">
+                        <h5>Sort By:</h5>
+                        <!-- Sorting Options -->
+                        <div class="sorting">
+                            <select id="sort">
+                                <option value="price_low_to_high">Price (Low to High)</option>
+                                <option value="price_high_to_low">Price (High to Low)</option>
+                                <option value="popularity">Popularity</option>
+                                <option value="rating_high_to_low">
+                                    Rating (High to Low)
+                                </option>
+                                <option value="newness">Newness</option>
+                            </select>
+                        </div>
+
+                        <!-- Filtering Options -->
+                        <div class="filtering mt-5">
+                            <h5>Filter by:</h5>
+                            <div class="filter-option">
+                                <label for="category">Category:</label>
+                                <select id="category">
+                                    <option value="women">Women</option>
+                                    <option value="men">Men</option>
+                                    <option value="kids">Kids</option>
+                                </select>
+                            </div>
+                            <div class="filter-option">
+                                <label for="price-range">Price Range:</label>
+                                <select id="price-range">
+                                    <option value="0-25">$0 - $25</option>
+                                    <option value="25-50">$25 - $50</option>
+                                    <option value="50-plus">$50+</option>
+                                </select>
+                            </div>
+                            <!-- Add more filter options as needed -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 left">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mt-5">
+                                <img src="img/kids1.jpg" class="card-img-top" alt="Product Image" />
+                                <div class="card-body">
+                                    <div class="mt-3 mb-3 align-items-center">
+                                        <h5 class="card-title">Baby Girl's Dress</h5>
+                                        <p class="card-text">₹2999</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <a href="#" class="btn btn-pink-bg">View</a>
+                                        <a href="#" class="btn btn-pink-bg">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card mt-5">
+                                <img src="img/kids2.jpg" class="card-img-top" alt="Product Image" />
+                                <div class="card-body">
+                                    <div class="mt-3 mb-3 align-items-center">
+                                        <h5 class="card-title">Boy's White Shirt</h5>
+                                        <p class="card-text">₹999</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <a href="#" class="btn btn-pink-bg">View</a>
+                                        <a href="#" class="btn btn-pink-bg">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mt-5">
+                                <img src="img/kids3.jpg" class="card-img-top" alt="Product Image" />
+                                <div class="card-body">
+                                    <div class="mt-3 mb-3 align-items-center">
+                                        <h5 class="card-title">Boy's Shoes</h5>
+                                        <p class="card-text">₹1999</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <a href="#" class="btn btn-pink-bg">View</a>
+                                        <a href="#" class="btn btn-pink-bg">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mt-5">
+                                <img src="img/kids4.jpg" class="card-img-top" alt="Product Image" />
+                                <div class="card-body">
+                                    <div class="mt-3 mb-3 align-items-center">
+                                        <h5 class="card-title">Boy's Pant</h5>
+                                        <p class="card-text">₹1499</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <a href="#" class="btn btn-pink-bg">View</a>
+                                        <a href="#" class="btn btn-pink-bg">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mt-5">
+                                <img src="img/kids5.jpg" class="card-img-top" alt="Product Image" />
+                                <div class="card-body">
+                                    <div class="mt-3 mb-3 align-items-center">
+                                        <h5 class="card-title">Baby Girl's Dress</h5>
+                                        <p class="card-text">₹1199</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <a href="#" class="btn btn-pink-bg">View</a>
+                                        <a href="#" class="btn btn-pink-bg">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer section-gap"></footer>
+
+    <!-- Include Bootstrap JavaScript dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

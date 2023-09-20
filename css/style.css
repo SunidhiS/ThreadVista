@@ -1,0 +1,739 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define CSS custom variables using :root */
+:root {
+  --base-font-size: 10px;
+
+  /* Color variables */
+  --primary-pink: #f89cab;
+  --secondary-pink: #db4566;
+
+  --primary-blue: #7fd7eb;
+  --secondary-blue: #109dbd;
+
+  --primary-purple: #9242dd;
+  --secondary-purple: #6929a5;
+
+  --white: #ffffff;
+  --gray: #bebebe;
+
+  --pinkish-white: #f9ece6;
+  --grayish-white: #eeeeee;
+  --purplish-white: #f9f8f7;
+
+  --dark: #2d2d2d;
+
+  --base-color: var(--pinkish-white);
+  /* Define a base color */
+
+  /* Background and text colors */
+  --primary-bg-pink: var(--primary-pink);
+  --secondary-bg-pink: var(--secondary-pink);
+
+  --primary-text-color: var(--white);
+  --pink-text-color: var(--secondary-pink);
+  --blue-text-color: var(--secondary-blue);
+  --purple-text-color: var(--secondary-purple);
+}
+
+/* Define font size for the root HTML element */
+html {
+  font-size: var(--base-font-size);
+}
+
+/* Define styles for scrollbar */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-bg-pink);
+  border-radius: 0.5rem;
+}
+
+/* Remove underlines from anchor tags */
+a {
+  text-decoration: none !important;
+}
+
+/* Remove list styling */
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+/* Apply margin to sections for spacing */
+.section-gap {
+  margin-top: 6%;
+}
+
+/* Remove box-shadow from buttons on focus */
+.btn:focus {
+  box-shadow: none;
+}
+
+/* Button styles with various color options */
+.btn-pink {
+  background-color: transparent;
+  color: var(--secondary-pink);
+  border: 0.1rem solid var(--secondary-pink);
+}
+
+.btn-pink:hover {
+  background-color: var(--secondary-pink);
+  color: var(--primary-text-color);
+}
+
+.btn-pink-bg {
+  background-color: var(--secondary-pink);
+  color: var(--primary-text-color) !important;
+  border: 0.1rem solid var(--secondary-pink);
+}
+
+.btn-pink-bg:hover {
+  background-color: transparent;
+  color: var(--secondary-pink) !important;
+  border: 0.1rem solid var(--secondary-pink);
+}
+
+.btn-white-pink {
+  background-color: var(--white);
+  color: var(--secondary-pink) !important;
+  border: 0.1rem solid var(--secondary-pink);
+}
+
+.btn-white-pink:hover {
+  background-color: transparent;
+  color: var(--white) !important;
+  border: 0.1rem solid var(--white);
+}
+
+.btn-blue {
+  background-color: transparent;
+  color: var(--secondary-blue) !important;
+  border: 0.1rem solid var(--secondary-blue);
+}
+
+.btn-blue:hover {
+  background-color: var(--secondary-blue);
+  color: var(--primary-text-color) !important;
+}
+
+.btn-blue-bg {
+  background-color: var(--secondary-blue);
+  color: var(--primary-text-color) !important;
+  border: 0.1rem solid var(--secondary-blue);
+}
+
+.btn-blue-bg:hover {
+  background-color: transparent;
+  color: var(--secondary-blue) !important;
+  border: 0.1rem solid var(--secondary-blue);
+}
+
+.btn-white-blue {
+  background-color: var(--white);
+  color: var(--secondary-blue) !important;
+  border: 0.1rem solid var(--secondary-blue);
+}
+
+.btn-white-blue:hover {
+  background-color: transparent;
+  color: var(--white) !important;
+  border: 0.1rem solid var(--white);
+}
+
+.btn-purple {
+  background-color: transparent;
+  color: var(--primary-purple) !important;
+  border: 0.1rem solid var(--primary-purple);
+}
+
+.btn-purple:hover {
+  background-color: var(--primary-purple);
+  color: var(--primary-text-color) !important;
+}
+
+.btn-purple-bg {
+  background-color: var(--primary-purple);
+  color: var(--primary-text-color) !important;
+  border: 0.1rem solid var(--primary-purple);
+}
+
+.btn-purple-bg:hover {
+  background-color: transparent;
+  color: var(--primary-purple) !important;
+  border: 0.1rem solid var(--primary-purple);
+}
+
+.btn-white-purple {
+  background-color: var(--white);
+  color: var(--primary-purple) !important;
+  border: 0.1rem solid var(--primary-purple);
+}
+
+.btn-white-purple:hover {
+  background-color: transparent;
+  color: var(--white) !important;
+  border: 0.1rem solid var(--white);
+}
+
+/* Header */
+
+header {
+  background-color: var(--pinkish-white);
+  border-radius: 2rem;
+}
+
+/* Navbar styles */
+.navbar .brand-name {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--secondary-pink);
+}
+
+/* Navbar toggler styles */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3e%3cpath stroke='rgba(219, 69, 102, 1.0)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='4' d='M4 10h32M4 20h32M4 30h32'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar .search {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem !important;
+  background-color: var(--purplish-white);
+  border-radius: 0.2rem;
+}
+
+.navbar .search input {
+  width: 100%;
+  background-color: transparent;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--secondary-pink);
+  caret-color: var(--secondary-pink);
+  outline: none;
+  border: none;
+}
+
+.navbar .search .btn-search {
+  padding: 0;
+  font-size: 1.4rem;
+  color: var(--secondary-pink);
+  transition: transform 0.3s;
+}
+
+.navbar .search .btn-search:active {
+  transform: scale(1.3);
+  transition: transform 0.1s;
+}
+
+.navbar .actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar .actions .btn {
+  padding: 1.1rem 2.5rem;
+  font-size: 1.2rem;
+  border-radius: 0.2rem;
+}
+
+.navbar-list {
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 1rem 0;
+  background-color: var(--secondary-bg-pink);
+}
+
+.navbar-list .nav-link {
+  margin: 0 3rem;
+  color: var(--primary-text-color);
+}
+
+.navbar-list .dropdown .dropdown-menu {
+  font-size: 1.4rem;
+  border: none;
+  line-height: 3rem;
+  padding: 0;
+  background-color: var(--pinkish-white);
+  box-shadow: 0px 0.5rem 0.9rem rgba(0, 0, 0, 0.1);
+}
+
+.navbar-list .dropdown .dropdown-menu li a {
+  font-weight: 700;
+  color: var(--secondary-pink);
+}
+
+.navbar-list .dropdown .dropdown-menu li:hover a:hover {
+  background-color: var(--secondary-pink);
+  color: var(--primary-text-color);
+}
+
+/* banners */
+.pink__banner,
+.blue__banner,
+.purple__banner {
+  height: fit-content;
+  padding-top: 2rem;
+}
+
+.pink__banner {
+  background-color: var(--primary-pink);
+}
+
+.blue__banner {
+  background-color: var(--primary-blue);
+}
+
+.purple__banner {
+  background-color: var(--secondary-purple);
+}
+
+.pink__banner {
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.blue__banner,
+.purple__banner {
+  border-radius: 2rem;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.banner-content h1 {
+  color: var(--primary-text-color);
+  font-weight: 900;
+  font-size: 5rem;
+}
+
+.banner-content p {
+  font-size: 1.7rem;
+  color: var(--primary-text-color);
+}
+
+.banner-content .btn {
+  font-size: 1.6rem;
+  padding: 1.2rem 4rem;
+  margin: 0 0.5rem 1rem 0;
+}
+
+.section-title h1 {
+  font-size: 3rem !important;
+  font-weight: 800 !important;
+}
+
+/* New Products section */
+
+.products-section .scrollable-container {
+  height: fit-content;
+  overflow-y: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.products-section .card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  gap: 4rem;
+}
+
+.products-section .card {
+  min-width: 27rem;
+  height: fit-content;
+  margin-bottom: 1.5rem;
+  scroll-snap-align: start;
+}
+
+.products-section .card,
+.products-section .card img {
+  border: none;
+  background-color: var(--pinkish-white);
+  border-radius: 0.3rem;
+}
+
+.products-section .card:hover {
+  cursor: pointer;
+}
+
+.products-section .card-title {
+  font-size: 1.6rem;
+  font-weight: 700 !important;
+  color: var(--secondary-pink);
+}
+
+.products-section .card-text {
+  font-size: 1.6rem;
+}
+
+.products-section .btn {
+  padding: 0.8rem 0;
+  width: 49%;
+}
+
+/* Info Section */
+
+.info-section .info-card {
+  background-color: var(--purplish-white);
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.info-section img {
+  width: 20%;
+  color: var(--secondary-purple) !important;
+}
+
+.info-card .card-title {
+  font-size: 2.2rem;
+}
+
+.info-card .card-text {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+}
+
+/* footer */
+
+footer {
+  background-color: var(--dark);
+  padding-top: 3%;
+  line-height: 3rem;
+}
+
+footer h3,
+footer p,
+footer ul li a {
+  color: var(--primary-text-color);
+}
+
+footer h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+footer ul li a {
+  font-size: 1.4rem;
+}
+
+footer ul li a:hover {
+  color: var(--primary-pink);
+  font-weight: 700;
+}
+
+.divider {
+  border-bottom: 0.1rem solid var(--gray);
+}
+
+/* login page */
+.login-form .login-form-right {
+  background-color: var(--primary-blue);
+  background-image: url(../img/login-bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.login-form .card {
+  background-color: var(--pinkish-white);
+  border: 0.2rem solid var(--secondary-pink);
+}
+
+.login-form .card-header {
+  background-color: var(--secondary-bg-pink);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 2rem;
+  color: var(--primary-text-color);
+  font-weight: 200;
+}
+
+.login-form label {
+  font-size: 1.2rem;
+  color: var(--secondary-pink);
+  padding-top: 2rem;
+}
+
+.login-form input {
+  padding: 0.4rem 1rem;
+  font-size: 2rem;
+  color: var(--secondary-pink) !important;
+  border: 0.1rem solid var(--secondary-pink);
+  border-radius: none;
+  background-color: var(--purplish-white);
+}
+
+.login-form input:focus {
+  box-shadow: none;
+  border: 0.2rem solid var(--secondary-pink);
+}
+
+.login-form .form-check {
+  display: flex;
+  color: var(--secondary-pink);
+}
+
+.login-form .form-check p {
+  margin-left: 1rem;
+}
+
+.login-form .submit-btn {
+  width: 49%;
+  font-size: 1.2rem !important;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.login-form-links,
+.login-form-links a {
+  font-size: 1.2rem;
+  margin: 1rem;
+  color: var(--secondary-pink);
+  font-weight: 600;
+}
+
+.login-form-links a:hover {
+  color: var(--secondary-purple);
+}
+
+/* All Products Page */
+.allproducts-list h5 {
+  color: var(--secondary-pink);
+}
+
+.allproducts-list label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--secondary-pink);
+}
+
+.allproducts-list select {
+  font-size: 1.6rem;
+  width: auto;
+  background-color: var(--pinkish-white);
+  border: 0.1rem solid var(--secondary-pink);
+}
+
+.allproducts-list select:hover {
+  color: var(--secondary-bg-pink);
+}
+
+.allproducts-list option:hover {
+  background-color: var(--secondary-pink) !important;
+  color: var(--primary-text-color) !important;
+}
+
+.allproducts-list .right {
+  border: 0.1rem solid var(--pinkish-white);
+}
+
+.allproducts-list .card {
+  border: none !important;
+  background-color: var(--pinkish-white);
+}
+
+.allproducts-list .card,
+.allproducts-list .card img {
+  border: none;
+  background-color: var(--pinkish-white);
+  border-radius: 0.3rem;
+}
+
+.allproducts-list .card:hover {
+  cursor: pointer;
+}
+
+.allproducts-list .card-title {
+  font-size: 1.6rem;
+  font-weight: 700 !important;
+  color: var(--secondary-pink);
+}
+
+.allproducts-list .card-text {
+  font-size: 1.6rem;
+}
+
+.allproducts-list .btn {
+  padding: 0.8rem 0;
+  width: 49%;
+}
+
+/* Contact Page */
+.contact-form .row {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .left {
+  background-image: url(../img/map.avif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contact-form h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  color: var(--secondary-pink);
+  background-color: var(--purplish-white);
+  border: 0.1rem solid var(--gray);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 0.1rem solid var(--gray);
+  outline: none;
+}
+
+.contact-form button {
+  font-size: 1.6rem;
+  width: 100%;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+
+/* Small Screens (up to 767px) */
+@media screen and (max-width: 767px) {
+  body {
+    margin: 1rem;
+  }
+
+  .navbar {
+    padding: 2.5rem 2rem;
+  }
+
+  .navbar .search {
+    width: 100%;
+    margin-top: 1rem !important;
+  }
+
+  .navbar .actions .btn {
+    margin: 1rem 0.25rem 0 0.25rem;
+  }
+
+  .navbar-list {
+    font-size: 1.2rem;
+  }
+
+  .navbar-list .nav-link {
+    padding: 0 0.9rem;
+    margin: 0;
+  }
+
+  .pink__banner .banner-content h1,
+  .banner-content h1 {
+    font-size: 4rem;
+  }
+
+  .banner-content {
+    text-align: center;
+  }
+
+  footer {
+    padding-top: 2%;
+  }
+
+  footer h3 {
+    margin-top: 2rem;
+  }
+
+  .login-form .submit-btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Medium Screens (768px to 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  body {
+    margin: 2rem;
+  }
+
+  .navbar {
+    padding: 2rem 3rem;
+  }
+
+  .navbar .search {
+    width: 100%;
+    margin-top: 1rem !important;
+  }
+
+  .navbar .actions .btn {
+    margin: 1rem 0.25rem 0 0.25rem;
+  }
+
+  .pink__banner .banner-content h1,
+  .banner-content h1 {
+    font-size: 4rem !important;
+  }
+
+  footer {
+    padding-top: 2%;
+  }
+
+  .login-form .submit-btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Large Screens (than 991px) */
+@media screen and (min-width: 991px) {
+  body {
+    margin: 3rem;
+  }
+
+  .navbar {
+    padding: 2.5rem 0;
+  }
+
+  .navbar .search {
+    width: 70%;
+  }
+
+  .navbar .actions .btn {
+    margin-left: 0.5rem;
+  }
+
+  .pink__banner .banner-content h1 {
+    font-size: 7rem;
+  }
+
+  footer {
+    padding-top: 3%;
+  }
+}

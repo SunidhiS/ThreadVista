@@ -1,0 +1,25 @@
+Certainly! Here's a note that explains why running the main file on a live server is recommended for this website:
+
+---
+
+**Note: Running this website on a Live Server**
+
+This website is designed to work best when served from a live server environment. A live server provides several benefits that enhance the website's functionality and performance:
+
+1. **Dynamic Content Loading:** This website may load dynamic content asynchronously using JavaScript. A live server ensures that these dynamic elements and content updates are properly executed, allowing for a seamless user experience.
+
+2. **Cross-Origin Requests:** Some features, such as fetching data from external sources or APIs, may require making cross-origin requests. A live server handles these requests more effectively, preventing potential security issues that can occur when opening HTML files directly in a browser.
+
+3. **Relative Paths:** The website uses relative paths for resource references like stylesheets, scripts, and images. A live server resolves these paths correctly, ensuring that all assets are loaded as intended.
+
+4. **Optimal Functionality:** Certain JavaScript features, especially those relying on server-side logic or APIs, may not work as expected when the website is opened directly as a file. A live server provides the necessary environment for these features to function optimally.
+
+To run this website on a live server:
+
+1. Open the main HTML file (usually named index.html) in your code editor.
+
+2. Start a live server using your code editor's built-in tools or by using extensions or plugins available for popular code editors like Visual Studio Code.
+
+3. Your default web browser will automatically open, and the website will load within the live server environment.
+
+By running the website on a live server, you'll ensure that all features, styles, and dynamic content work as intended, providing the best possible user experience.
